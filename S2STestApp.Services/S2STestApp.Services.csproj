@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\S2STestApp.Data\S2STestApp.Data.csproj" />
+    <ProjectReference Include="..\S2STestApp.ViewModels\S2STestApp.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

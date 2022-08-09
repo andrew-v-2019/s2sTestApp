@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp6.0</TargetFramework>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <Content Remove="package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="src\models\book.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\S2STestApp.Services\S2STestApp.Services.csproj" />
+    <ProjectReference Include="..\S2STestApp.ViewModels\S2STestApp.ViewModels.csproj" />
+  </ItemGroup>
+
+ <ItemGroup>
+  <Content Include="Books.db">
+   <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
+ </ItemGroup>
+
+ <ItemGroup>
+    <TypeScriptCompile Include="src\models\book.ts" />
+  </ItemGroup>
+
+</Project>
